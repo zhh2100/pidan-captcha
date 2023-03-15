@@ -9,7 +9,7 @@
     ],
     "license": "Apache-2.0",
     "require": {
-        "zhh2100/framework": "^6.0"
+        "zhh2100/framework": "^1.0.1"
     },
     "autoload": {
         "psr-4": {
