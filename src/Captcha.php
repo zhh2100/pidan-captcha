@@ -115,9 +115,7 @@ class Captcha
 
         $hash = password_hash($key, PASSWORD_BCRYPT, ['cost' => 10]);
 
-        $this->session->set('captcha', [
-            'key' => $hash,
-        ]);
+        $this->session->set('captcha', $hash);
 
         return [
             'value' => $bag,
@@ -133,11 +131,12 @@ class Captcha
      */
     public function check(string $code): bool
     {
+
         if (!$this->session->has('captcha')) {
             return false;
         }
 
-        $key = $this->session->get('captcha.key');
+        $key = $this->session->get('captcha');
 
         $code = mb_strtolower($code, 'UTF-8');
 
