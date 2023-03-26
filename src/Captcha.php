@@ -2,9 +2,8 @@
 namespace pidan\captcha;
 
 use Exception;
-use pidan\Config;
 use pidan\Response;
-use pidan\Session;
+
 
 class Captcha
 {
@@ -56,10 +55,11 @@ class Captcha
      * @param Config  $config
      * @param Session $session
      */
-    public function __construct(Config $config, Session $session)
+    public function __construct()
     {
-        $this->config  = $config;
-        $this->session = $session;
+    		$app=app();
+        $this->config  = $app->make('config');
+        $this->session = $app->make('session');
     }
 
     /**
