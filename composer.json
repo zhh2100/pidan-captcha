@@ -16,12 +16,5 @@
             "pidan\\captcha\\": "src/"
         }
 
-    },
-    "extra": {
-        "pidan": {
-            "services": [
-                "pidan\\captcha\\CaptchaService"
-            ]
-        }
     }
 }
