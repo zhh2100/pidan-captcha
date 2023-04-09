@@ -1,6 +1,6 @@
 {
     "name": "zhh2100/pidan-captcha",
-    "description": "captcha package for pidan",
+    "description": "captcha package for pidan  同步到v3.0.8 Oct 26, 2022",
     "authors": [
         {
             "name": "jetee",
@@ -14,19 +14,7 @@
     "autoload": {
         "psr-4": {
             "pidan\\captcha\\": "src/"
-        },
-        "files": [
-            "src/helper.php"
-        ]
-    },
-    "extra": {
-        "pidan": {
-            "services": [
-                "pidan\\captcha\\CaptchaService"
-            ],
-            "config":{
-                "captcha": "src/config.php"
-            }            
         }
+
     }
 }
